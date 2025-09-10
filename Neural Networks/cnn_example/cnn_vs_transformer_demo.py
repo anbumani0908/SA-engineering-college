@@ -320,6 +320,7 @@ def demonstrate_differences():
     
     # Save plot using asset manager
     plot_path = am.get_asset_path('neural_networks', 'plots', 'cnn_vs_transformer_comparison.png')
+    os.makedirs(os.path.dirname(plot_path), exist_ok=True)  # Ensure directory exists
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     plt.show()
     
